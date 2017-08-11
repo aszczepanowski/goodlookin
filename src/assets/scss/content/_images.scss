@@ -1,0 +1,12 @@
+// main: ../style.scss
+svg {
+  @include transition(all 0.25s ease);
+}
+
+figure {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

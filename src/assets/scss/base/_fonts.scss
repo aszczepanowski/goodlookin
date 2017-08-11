@@ -1,0 +1,6 @@
+// main: ../style.scss
+@include font-face(Lato, lato-regular, 400, normal, woff);
+@include font-face(Lato, lato-italic, 400, italic, woff);
+@include font-face(Lato, lato-bold, 700, normal, woff);
+@include font-face(Lato, lato-bolditalic, 700, italic, woff);
+@include font-face(LoveloBlack, lovelo-black, 400, normal, woff);

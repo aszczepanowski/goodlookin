@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>Goodlookin.pl</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!--
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content=">Goodlookin.pl">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="assets/images/og.jpg">
+  <meta property="og:url" content="#">
+  -->
+  <!--
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="assets/icons/manifest.json">
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  -->
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!--[if lt IE 9]>
+  <script src="assets/js/vendor/html5shiv.min.js"></script>
+  <script src="assets/js/vendor/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="navbar">
+      <div class="wrapper">
+        <div class="navbar__brand">
+          <a class="navbar__brand__logo" href="#">
+            <img class="navbar__brand__logo__img" src="assets/images/logo.svg" alt="Goodlookin.pl">
+          </a>
+          <span class="navbar__brand__slogan">That's what we call fashion</span>
+        </div>
+        <div class="navbar__user-actions">
+          <div class="navbar__account">
+            <a class="navbar__account__link" href="#">
+              <svg class="navbar__account__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
+              <span class="navbar__account__title">Twoje konto</span>
+            </a>
+          </div>
+          <div class="navbar__cart">
+            <a class="navbar__cart__link" href="#">
+              <svg class="navbar__cart__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" /></svg>
+              <span class="navbar__cart__content">269,00 zł/prod. (3)</span>
+              <span class="navbar__cart__count">3</span>
+            </a>
+          </div>
+          <div class="navbar__checkout">
+            <a class="navbar__checkout__link btn btn--sm btn--orange" href="#">Do kasy</a>
+          </div>
+        </div>
+        <div class="navbar__search" role="search">
+          <form class="navbar__search__form" action="#" method="POST">
+            <input class="navbar__search__form__input" type="email" placeholder="Szukaj produktu...">
+            <button class="navbar__search__form__submit" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M23.77,22.69l-6.2-6.1c1.62-1.76,2.62-4.09,2.62-6.66C20.2,4.45,15.67,0,10.1,0S0,4.45,0,9.94c0,5.49,4.52,9.94,10.1,9.94c2.41,0,4.62-0.83,6.36-2.22l6.22,6.12c0.3,0.3,0.79,0.3,1.1,0C24.08,23.48,24.08,22.99,23.77,22.69zM10.1,18.34c-4.72,0-8.54-3.76-8.54-8.41c0-4.64,3.83-8.41,8.54-8.41c4.72,0,8.54,3.76,8.54,8.41C18.64,14.58,14.82,18.34,10.1,18.34z"/></svg>
+            </button>
+          </form>
+        </div>
+        <nav class="navbar__nav">
+          <div class="navbar__menu-toggle">
+            <svg class="navbar__menu-toggle__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+            <span class="navbar__menu-toggle__title">Kategorie sklepu</span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__menu__item navbar__menu__item--has-submenu"><a href="#">Odzież</a></li>
+            <li class="navbar__menu__item navbar__menu__item--has-submenu"><a href="#">Akcesoria</a></li>
+            <li class="navbar__menu__item navbar__menu__item--has-submenu"><a href="#">Trendy</a></li>
+            <li class="navbar__menu__item navbar__menu__item--has-submenu"><a href="#">Marki</a></li>
+            <li class="navbar__menu__item"><a href="#">Nowości</a></li>
+            <li class="navbar__menu__item"><a href="#">Promocje</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="offer">
+      <div class="wrapper">
+        <div class="offer__slider">
+          <div class="offer__slide">
+            <img class="offer__slide__img" src="files/offer/kolekcja-jesien-2015.png" alt="Kurtka jesienna granatowa">
+            <div class="offer__slide__caption">
+              <h1 class="offer__slide__title">Nowa kolekcja jesień 2015</h1>
+              <p class="offer__slide__description">Niebanalna, pikowana kurtka wiosenna! Kurtka bardzo dobrze skrojona. Zapinana na napy. Wykonana z świetnej jakości materiału. Kurtka jest pikowana.</p>
+              <a class="offer__slide__btn btn" href="#">Dowiedz się więcej</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="last-viewed">
+      <div class="wrapper">
+        <h3 class="last-viewed__title">Ostatnio oglądane:</h3>
+        <div class="last-viewed__products">
+          <ul class="last-viewed__product-list">
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/1.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/2.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/3.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/4.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/1.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/2.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/3.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/4.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/1.jpg" alt="Kurtka zimowa"></a></li>
+            <li class="last-viewed__product"><a href="#" title="Kurtka zimowa"><img class="last-viewed__product__img" src="files/products/2.jpg" alt="Kurtka zimowa"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="home-products">
+      <div class="wrapper">
+        <ul class="tablist" role="tablist">
+          <li class="tablist__tab tablist__tab--active" role="tab">
+            <a class="tabs__item__link" href="#">Polecane</a>
+          </li>
+          <li class="tablist__tab" role="tab">
+            <a class="tabs__item__link" href="#">Nowości</a>
+          </li>
+          <li class="tablist__tab" role="tab">
+            <a class="tabs__item__link" href="#">Promocje</a>
+          </li>
+        </ul>
+        <div class="tab-pane tab-pane--active" data-tab="featured-products" role="tabpanel">
+          <ul class="product-list">
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/1.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/2.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/3.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/4.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/1.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/2.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/3.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/4.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="more-products">
+            <a class="btn" href="#">Zobacz więcej produktów</a>
+          </div>
+        </div>
+        <div class="tab-pane" data-tab="new-products" role="tabpanel">
+          <ul class="product-list">
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/1.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/2.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/3.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/4.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/1.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/2.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/3.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/4.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="more-products">
+            <a class="btn" href="#">Zobacz więcej produktów</a>
+          </div>
+        </div>
+        <div class="tab-pane" data-tab="special-products" role="tabpanel">
+          <ul class="product-list">
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/1.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/2.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/3.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/4.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/1.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/2.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/3.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+            <li class="product product--block">
+              <a href="#" title="Kurtka zimowa">
+                <div class="product__cover">
+                  <img class="product__cover__img" src="files/products/4.jpg" alt="Kurtka zimowa">
+                </div>
+                <div class="product__details">
+                  <span class="product__price">159,90&nbsp;zł</span>
+                  <h4 class="product__name">Parka zimowa K&amp;L bordowa</h4>
+                  <span class="product__code">(KM1519)</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="more-products">
+            <a class="btn" href="#">Zobacz więcej produktów</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-blocks">
+      <div class="wrapper">
+        <div class="footer-blocks__box">
+          <div class="footer-shop-links footer-block">
+            <h5 class="footer-block__title">Informacje</h5>
+            <ul class="footer-block__list">
+              <li class="footer-block__list__item"><a href="#">Status zamówienia</a></li>
+              <li class="footer-block__list__item"><a href="#">Zwroty, wymiana, reklamacje</a></li>
+              <li class="footer-block__list__item"><a href="#">Regulamin sklepu</a></li>
+              <li class="footer-block__list__item"><a href="#">Formy płatności</a></li>
+              <li class="footer-block__list__item"><a href="#">Koszty dostawy</a></li>
+              <li class="footer-block__list__item"><a href="#">O firmie</a></li>
+              <li class="footer-block__list__item"><a href="#">Program lojalnościowy</a></li>
+              <li class="footer-block__list__item"><a href="#">Kontakt</a></li>
+              <li class="footer-block__list__item"><a href="#">Polityka cookies sklepu</a></li>
+            </ul>
+          </div>
+          <div class="footer-payment-shipment footer-block">
+            <h5 class="footer-block__title">Płatność i dostawa</h5>
+            <div class="footer-block__info">
+              <p>
+                Akceptowalne formy płatności to karta płatnicza, przelew online, przelew tradycyjny, płatność przy odbiorze.
+              </p>
+              <p>
+                Metody dostawy:<br>
+                Przesyłka kurierska lub odbiór osobisty w sklepie.
+              </p>
+              <p>
+                Koszty dostawy:<br>
+                wpłata na konto: 9,90 zł<br>
+                opłata za pobraniem: 14,90 zł<br>
+                przy zamówieniu powyżej 200 zł wysyłka gratis!<br>
+                Powyższe ceny dotyczą wysyłki na terenie Polski.
+              </p>
+              <p><span class="color-orange">30 dni na odstąpienie od umowy!</span></p>
+            </div>
+          </div>
+          <div class="footer-contact footer-block">
+            <h5 class="footer-block__title">Newsletter</h5>
+            <div class="footer-newsletter">
+              <form class="footer-newsletter__form" action="#" method="POST">
+                <input class="footer-newsletter__form__input" type="email" placeholder="Wpisz swój adres e-mail...">
+                <button class="footer-newsletter__form__submit btn btn--orange" type="submit">Zapisz się</button>
+              </form>
+            </div>
+            <h5 class="footer-block__title">Kontakt</h5>
+            <div class="footer-contact__phone"><a href="tel:517577517">517 577 517</a></div>
+            <div class="footer-contact__email"><a href="mailto:sklep@goodlookin.pl">sklep@goodlookin.pl</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <p class="footer__copyright">Wszelkie prawa zastrzeżone przez &copy; goodlookin.</p>
+        <p class="footer__powered-by">Powered by <a href="http://www.i-systems.pl">i-systems.pl</a></p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

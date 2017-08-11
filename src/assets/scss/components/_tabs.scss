@@ -1,0 +1,77 @@
+// main: ../style.scss
+.tablist {
+  @include position;
+  font-size: 0;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 35px 0 10px;
+
+  &:before {
+    content: '';
+    @include position(absolute,10px null null 0);
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $gray90;
+  }
+
+  .tablist__tab {
+    @include position;
+    display: inline-block;
+    background: $white;
+    color: $gray70;
+    font-family: 'LoveloBlack', sans-serif;
+    font-size: 18px;
+    padding: 0 50px;
+
+    &:after {
+      content: '';
+      display: none;
+      border: 3px solid transparent;
+      border-top: 4px solid;
+      margin-left: 5px;
+    }
+
+    &.tablist__tab--active {
+      color: $black;
+
+      &:after {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .tablist__tab__link {
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  @media (max-width:1023px) {
+    .tablist__tab {
+      font-size: 16px;
+      padding: 0 25px;
+    }
+  }
+
+  @media (max-width:479px) {
+    &:before {
+      top: 8px;
+    }
+
+    .tablist__tab {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+}
+
+.tab-pane {
+  display: none;
+
+  &.tab-pane--active {
+    display: block;
+  }
+}

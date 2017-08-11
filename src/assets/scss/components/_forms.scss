@@ -1,0 +1,43 @@
+// main: ../style.scss
+form {
+  @include position;
+}
+
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=week],
+input[type=email],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=color],
+input[type=number],
+input[type=search],
+textarea,
+select {
+  width: 100%;
+  border: 1px solid $gray90;
+  color: $gray;
+  font-size: 13px;
+  padding: 7px 20px;
+  @include border-radius(20px);
+  @include transition(all 0.25s ease);
+  -webkit-appearance: none;
+
+  &:focus {
+    border-color: $theme-orange-light;
+    color: $black;
+  }
+}
+
+textarea {
+  height: 100px;
+}
+
+@include placeholder {
+  color: $gray80;
+}

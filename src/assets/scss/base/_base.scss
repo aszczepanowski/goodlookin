@@ -1,0 +1,8 @@
+// main: ../style.scss
+body {
+  background: $white;
+  color: $gray;
+  font: 14px/1.4 'Lato', sans-serif;
+}
+
+@include selection($theme-orange);

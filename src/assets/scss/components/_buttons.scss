@@ -1,0 +1,33 @@
+// main: ../style.scss
+[role="button"] {
+  cursor: pointer;
+}
+
+.btn {
+  @include position;
+  display: inline-block;
+  @include linear-gradient(to bottom, $gray99, $gray95, $fallback: $gray95);
+  color: $black;
+  font-family: 'LoveloBlack', sans-serif;
+  font-size: 11px;
+  padding: 11px 35px 10px;
+  @include border-radius(20px);
+  @include box-shadow(0 1px 2px rgba($black,0.25));
+
+  &:hover {
+    @include box-shadow(0 3px 6px rgba($black,0.25));
+  }
+
+  &.btn--sm {
+    padding: 10px 30px 9px;
+  }
+
+  &.btn--orange {
+    @include linear-gradient(to bottom, $theme-orange-light, $theme-orange, $fallback: $theme-orange);
+    color: $white;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}

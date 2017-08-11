@@ -1,0 +1,354 @@
+// main: ../style.scss
+.navbar {
+  @include position;
+  background: $white;
+
+  .wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .navbar__brand {
+    @include position;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .navbar__brand__logo {
+      display: block;
+
+      .navbar__brand__logo__img {
+        display: block;
+      }
+    }
+
+    .navbar__brand__slogan {
+      @include position(absolute,null 0 -7px 0);
+      display: block;
+      background: $white;
+      color: $gray80;
+      font-size: 11px;
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 25px;
+      margin-right: 25px;
+    }
+  }
+
+  .navbar__search {
+    @include position;
+    float: right;
+    width: 240px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+
+    .navbar__search__form {
+      @include position;
+
+      .navbar__search__form__input {
+        padding-right: 50px;
+      }
+
+      .navbar__search__form__submit {
+        @include position(absolute,0 0 null null);
+        background: transparent;
+        padding: 8px 15px 7px;
+
+        &:hover {
+          svg {
+            fill: $theme-orange;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar__user-actions {
+    @include position;
+    float: right;
+    color: $black;
+    font-size: 13px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+  }
+
+  .navbar__account,
+  .navbar__cart,
+  .navbar__checkout {
+    @include position;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+
+  .navbar__account {
+    margin-left: 30px;
+
+    .navbar__account__link {
+      display: block;
+
+      &:hover {
+        color: $gray;
+
+        .navbar__account__icon {
+          fill: $gray;
+        }
+      }
+    }
+
+    .navbar__account__icon,
+    .navbar__account__title {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .navbar__account__icon {
+      margin-right: 5px;
+    }
+  }
+
+  .navbar__cart {
+    .navbar__cart__link {
+      display: block;
+
+      &:hover {
+        color: $gray;
+
+        .navbar__cart__icon {
+          fill: $gray;
+        }
+      }
+    }
+
+    .navbar__cart__icon,
+    .navbar__cart__content {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .navbar__cart__icon {
+      margin-right: 5px;
+    }
+
+    .navbar__cart__count {
+      display: none;
+      min-width: 18px;
+      height: 18px;
+      line-height: 16px;
+      @include linear-gradient(to bottom, $theme-orange-light, $theme-orange, $fallback: $theme-orange);
+      border: 1px solid $white;
+      color: $white;
+      font-size: 10px;
+      text-align: center;
+      padding: 0 4px;
+      @include border-radius(10px);
+    }
+  }
+
+  .navbar__nav {
+    float: left;
+    width: 100%;
+    border-top: 1px solid $gray90;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .navbar__menu-toggle {
+    @include position;
+    display: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+
+    .navbar__menu-toggle__icon,
+    .navbar__menu-toggle__title {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .navbar__menu-toggle__title {
+      color: $black;
+      font-size: 14px;
+      font-family: 'LoveloBlack', sans-serif;
+      margin-left: 5px;
+    }
+  }
+
+
+  .navbar__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .navbar__menu__item {
+      display: inline-block;
+      color: $black;
+      font-family: 'LoveloBlack', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.navbar__menu__item--has-submenu {
+        > a {
+          &:after {
+            content: '';
+            display: inline-block;
+            border: 3px solid transparent;
+            border-top: 4px solid;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      > a {
+        display: block;
+
+        &:hover {
+          color: $gray60;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .navbar__brand {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .navbar__brand__logo {
+        .navbar__brand__logo__img {
+          width: 189px;
+          height: 37px;
+        }
+      }
+
+      .navbar__brand__slogan {
+        bottom: -6px;
+        font-size: 9px;
+        padding-left: 15px;
+        margin-right: 15px;
+      }
+    }
+
+    .navbar__search {
+      width: 200px;
+    }
+
+    .navbar__user-actions {
+      padding-top: 28px;
+      padding-bottom: 28px;
+
+      .navbar__checkout {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar__brand {
+      padding-top: 15px;
+      padding-bottom: 0;
+
+      .navbar__brand__logo {
+        .navbar__brand__logo__img {
+          width: 158px;
+          height: 31px;
+        }
+      }
+
+      .navbar__brand__slogan {
+        display: none;
+      }
+    }
+
+    .navbar__search {
+      float: left;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .navbar__user-actions {
+      padding-top: 18px;
+      padding-bottom: 0;
+
+      .navbar__account {
+        .navbar__account__title {
+          display: none;
+        }
+
+        .navbar__account__icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 0;
+        }
+      }
+
+      .navbar__cart {
+        .navbar__cart__link {
+          padding-right: 10px;
+        }
+
+        .navbar__cart__content {
+          display: none;
+        }
+
+        .navbar__cart__icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 0;
+        }
+
+        .navbar__cart__count {
+          @include position(absolute,null 0 -3px null);
+          display: inline-block;
+        }
+      }
+
+      .navbar__checkout {
+        display: none;
+      }
+    }
+
+    .navbar__nav {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .navbar__menu-toggle {
+      display: block;
+    }
+
+    .navbar__menu {
+      display: none;
+
+      .navbar__menu__item {
+        display: block;
+        border-bottom: 1px solid $gray90;
+        margin-right: 0;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &.navbar__menu__item--has-submenu {
+          > a {
+            &:after {
+              @include position(7px null null null);
+              float: right;
+              margin-left: 0;
+            }
+          }
+        }
+
+        > a {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+// main: ../style.scss
+.footer-blocks {
+  margin-top: 60px;
+
+  .footer-blocks__box {
+    border: 2px solid $gray95;
+    padding-top: 40px;
+    @include clearfix;
+  }
+
+  .footer-block {
+    color: $gray70;
+    font-size: 13px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 40px;
+
+    .footer-block__title {
+      color: $black;
+      margin-bottom: 25px;
+    }
+
+    .footer-block__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .footer-block__list__item {
+        color: $black;
+        margin: 15px 0;
+
+        > a {
+          &:hover {
+            color: $theme-orange;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-shop-links {
+    float: left;
+    width: 25%;
+  }
+
+  .footer-payment-shipment {
+    float: left;
+    width: 40%;
+  }
+
+  .footer-contact {
+    float: left;
+    width: 35%;
+
+    .footer-contact__phone {
+      color: $gray70;
+      font-size: 30px;
+      font-weight: bold;
+
+      > a {
+        &:hover {
+          color: $theme-orange;
+        }
+      }
+    }
+
+    .footer-contact__email {
+      color: $black;
+      font-weight: bold;
+      margin-top: 10px;
+
+      > a {
+        &:hover {
+          color: $theme-orange;
+        }
+      }
+    }
+  }
+
+  .footer-newsletter {
+    margin-bottom: 40px;
+
+    .footer-newsletter__form {
+      .footer-newsletter__form__input {
+        width: calc(100% - 113px);
+      }
+      .footer-newsletter__form__submit {
+        float: right;
+        padding: 10px 25px 9px;
+      }
+    }
+  }
+
+  @media (max-width:1168px) {
+    .footer-blocks__box {
+      border-right: 0;
+      border-left: 0;
+    }
+  }
+
+  @media (max-width:1023px) {
+    .footer-block {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .footer-shop-links,
+    .footer-payment-shipment {
+      width: 50%;
+    }
+
+    .footer-contact {
+      width: 100%;
+    }
+  }
+
+  @media (max-width:479px) {
+    .footer-shop-links,
+    .footer-payment-shipment {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  color: $gray70;
+  font-size: 12px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .footer__copyright,
+  .footer__powered-by {
+    margin-bottom: 0;
+  }
+}
